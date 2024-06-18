@@ -1,0 +1,153 @@
+body {
+  background-color: rgb(69, 155, 177);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 0.5em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 70px;
+  color: #efefef; /* A light color to stand out against the dark theme */
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Giving depth to the text */
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.calc-container {
+  width: 400px;
+  height: 640px;
+  background: linear-gradient(145deg, rgba(10, 10, 10, 1), rgba(28, 28, 28, 1));
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.5) -5px -5px 10px,
+    rgba(27, 98, 146, 0.3) 12px 12px 18px, inset rgba(0, 0, 0, 0.2) 1px 1px 4px,
+    inset rgba(255, 255, 255, 0.1) -1px -1px 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  gap: 7px;
+  align-items: center;
+}
+
+.calc-screen {
+  flex: 1;
+  width: calc(
+    100% - 4 * 5px
+  ); /* 5 px padding on each side of calc-container + 5px padding in calc-screen */
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 3px solid #afafaf;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgb(56, 56, 46);
+  font-size: 80px;
+  color: #efefef;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background: linear-gradient(to bottom, #6d6d57, #4c4c36);
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3),
+    inset -1px -1px 5px rgba(0, 0, 0, 0.3); /* Inner shadows */
+}
+
+.calc-buttons {
+  width: calc(100% - 2 * 5px); /* 5 px padding on each side of calc-container */
+  height: 76%;
+  border-radius: 5px;
+  display: flex;
+  background-color: rgb(34, 27, 27);
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.button {
+  width: calc((100% - 4 * 4px) / 4);
+  height: calc((100% - 4 * 4px) / 5);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: lightblue;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 600;
+
+  background: linear-gradient(to bottom, #d6e8f2, #b0c7d4);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  background-color: #77bbd1;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:active {
+  transform: scale(0.97) translateY(2px); /* This pushes the button slightly down when pressed */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* The shadow is reduced to give the pressed effect */
+}
+
+.operator,
+#change-sign {
+  background-color: rgb(6, 92, 121);
+  background: linear-gradient(to bottom, #0893b2, #06687f);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.operator:hover {
+  background-color: #2a697e;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.operator:active {
+  transform: scale(0.97) translateY(2px);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#equals {
+  flex: 1;
+  background-color: rgb(207, 137, 6);
+  background: linear-gradient(to bottom, #ffcb55, #8f6b07);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#equals:active {
+  transform: scale(0.97) translateY(2px);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#clear {
+  background-color: rgb(158, 40, 40);
+  background: linear-gradient(to bottom, #ff6c6c, #630d0d);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#clear:active {
+  transform: scale(0.97) translateY(2px);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#delete {
+  background-color: rgb(14, 13, 13);
+  color: aliceblue;
+  background: linear-gradient(to bottom, #5c5a5a, #121212);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#delete:active {
+  transform: scale(0.97) translateY(2px);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
