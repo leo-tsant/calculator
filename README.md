@@ -1,7 +1,7 @@
 # Calculator
 
 Live Demo:
-https://leo-tsant.github.io/Calculator/
+https://leo-tsant.github.io/calculator/
 
 ![Project Screenshot](./calculator.png)
 
